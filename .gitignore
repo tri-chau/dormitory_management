@@ -2,5 +2,26 @@
 *.log
 
 # config
-.xml
+*.xml
 
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+nbproject/
+.idea/
+*.iml
+.project
+.settings/
+.classpath
+
+# Maven build
+target/
+bin/
+out/
+
+# Misc
+*.tmp
