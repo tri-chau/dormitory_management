@@ -112,7 +112,3 @@
 
 - This project was developed for academic purposes, and can be expanded with role-based access control, validation logics, etc.
 - Some screens are implemented with UI only and may not be fully connected to the backend.
-
-## 📚 License
-
-This project is developed for learning purposes by [Your Name]. Feel free to use or improve it.
