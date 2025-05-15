@@ -1,110 +1,118 @@
+# 🏠 Dormitory Management System – Java Swing Desktop Application
 
-# 🏠 Quản Lý Ký Túc Xá – Java Swing Project
+> A desktop application built with Java Swing to manage dormitory operations for students, building managers, accountants, and staff members.
 
-> Một ứng dụng desktop được phát triển bằng Java Swing nhằm quản lý hoạt động vận hành ký túc xá cho sinh viên, trưởng tòa, nhân viên và kế toán viên.
+## 🚀 Key Features
 
-## 🚀 Tính năng nổi bật
+### 👤 Student
+- Register for rooms / request room transfer / extend stay / check out
+- View rental invoices
+- Read announcements from the building manager
+- Register for events
+- Submit service requests or complaints
 
-### 👤 Sinh viên
-- Đăng ký phòng / chuyển phòng / trả phòng / gia hạn phòng
-- Xem hóa đơn tiền phòng
-- Đọc thông báo từ trưởng tòa
-- Đăng ký tham gia hoạt động
-- Gửi các phiếu yêu cầu tới ban quản lý
+### 🏢 Building Manager
+- Approve requests from students: room registration, transfers, check-outs
+- Manage students in the building
+- Post announcements
+- Process service requests
 
-### 🏢 Trưởng tòa
-- Duyệt yêu cầu từ sinh viên: đăng ký, chuyển phòng, trả phòng
-- Quản lý danh sách sinh viên thuộc tòa nhà
-- Đăng thông báo nội bộ
-- Xử lý các phiếu yêu cầu
+### 💰 Accountant
+- Generate invoices
+- Manage invoice types
+- Revenue statistics with charts
+- Export PDF invoices
 
-### 💰 Kế toán
-- Tạo hóa đơn tiền phòng
-- Quản lý các loại hóa đơn
-- Thống kê doanh thu & xuất file PDF
-- Biểu đồ thống kê
+### 🛠 Staff
+- Create and manage student activities
+- Mark attendance for activities
+- Track student participation
 
-### 🛠 Nhân viên quản lý
-- Tạo và quản lý hoạt động sinh viên
-- Điểm danh hoạt động
-- Thống kê mức độ tham gia của sinh viên
+## 🛠️ Tech Stack
 
-## 🛠️ Công nghệ sử dụng
-- **Java** (Desktop Application)
-- **Java Swing** (UI)
-- **JDBC + MySQL** (Database)
-- **JFreeChart** (Thống kê biểu đồ)
-- **iText** (Xuất file PDF)
+- **Java** – Desktop Application
+- **Java Swing** – UI Components
+- **JDBC + Oracle** – Database
+- **JFreeChart** – For chart visualizations
+- **iText** – Generate PDF reports
 
-## 📂 Cấu trúc project
+## ▶️ How to Run
 
-```
-QLKTX_HQT/
-├── src/             # Mã nguồn Java
-│   ├── controller/
-│   ├── model/
-│   ├── view/
-├── resources/       # Ảnh, icon, tài nguyên tĩnh
-├── readme/          # Hình ảnh README
-├── pom.xml          # Quản lý dependency (nếu dùng Maven)
-└── ...
-```
-
-## ▶️ Cách chạy project
-
-1. Clone project:
+1. Clone this repository:
    ```bash
    git clone https://github.com/your-username/QLKTX_HQT.git
    ```
 
-2. Mở bằng **NetBeans** hoặc **IntelliJ IDEA**
+2. Open in **NetBeans** or **IntelliJ IDEA**
 
-3. Cấu hình kết nối cơ sở dữ liệu trong file `DatabaseConnection.java`:
+3. Configure database connection in `DatabaseConnection.java`:
    ```java
-   String url = "jdbc:mysql://localhost:3306/ten_database";
+   String url = "jdbc:mysql://localhost:3306/your_database";
    String user = "root";
    String password = "your_password";
    ```
 
-4. Chạy ứng dụng từ class `Main.java`
+4. Run `Main.java` to start the application
 
-## 📷 Hình ảnh minh họa
+## 📸 Screenshots
 
 <details>
-  <summary><strong>🎓 Giao diện Sinh viên</strong></summary>
+  <summary><strong>🔑 Login Page</strong></summary>
+  <img src="/readme/login.jpg" alt="Login" width="600px">
+</details>
 
-  <img src="/readme/login.jpg" alt="Login Screen" width="600px">
+<details>
+  <summary><strong>🎓 Student Dashboard</strong></summary>
   <img src="/readme/student_dashboard.jpg" alt="Student Dashboard" width="600px">
-  <img src="/readme/register_room.jpg" alt="Đăng ký phòng" width="600px">
-  <img src="/readme/student_invoice_list.jpg" alt="Hóa đơn phòng" width="600px">
-  <img src="/readme/acti_register_list.jpg" alt="Đăng ký hoạt động" width="600px">
 </details>
 
 <details>
-  <summary><strong>🏢 Giao diện Trưởng tòa</strong></summary>
-
-  <img src="/readme/request_list.jpg" alt="Danh sách yêu cầu sinh viên" width="600px">
-  <img src="/readme/search_room_info.jpg" alt="Tra cứu thông tin phòng" width="600px">
+  <summary><strong>🛏️ Register Room</strong></summary>
+  <img src="/readme/register_room.jpg" alt="Register Room" width="600px">
 </details>
 
 <details>
-  <summary><strong>💰 Giao diện Kế toán</strong></summary>
-
-  <img src="/readme/create_invoice.jpg" alt="Tạo hóa đơn" width="600px">
-  <img src="/readme/invoice_stats.jpg" alt="Thống kê hóa đơn" width="600px">
-  <img src="/readme/update_room_price.jpg" alt="Cập nhật giá phòng" width="600px">
+  <summary><strong>📑 Invoice List</strong></summary>
+  <img src="/readme/student_invoice_list.jpg" alt="Invoice List" width="600px">
 </details>
 
 <details>
-  <summary><strong>🛠 Giao diện Nhân viên quản lý</strong></summary>
-
-  <img src="/readme/acti_list.jpg" alt="Danh sách hoạt động" width="600px">
-  <img src="/readme/join_acti_stats.jpg" alt="Thống kê tham gia hoạt động" width="600px">
+  <summary><strong>📝 Submit Request</strong></summary>
+  <img src="/readme/request_list.jpg" alt="Request List" width="600px">
 </details>
 
-## 📌 Ghi chú
-- Dự án được phát triển trong môi trường học thuật – có thể được mở rộng thêm ở phần phân quyền và validate dữ liệu.
-- Một số tính năng đã hoàn thiện phần UI nhưng chưa kết nối đầy đủ đến database.
+<details>
+  <summary><strong>📢 Announcements & Activities</strong></summary>
+  <img src="/readme/acti_register_list.jpg" alt="Registered Activities" width="600px">
+  <img src="/readme/acti_list.jpg" alt="Activity List" width="600px">
+</details>
 
-## 📚 Bản quyền
-Dự án được thực hiện cho mục đích học tập bởi **[Tên bạn]**.
+<details>
+  <summary><strong>📊 Statistics</strong></summary>
+  <img src="/readme/invoice_stats.jpg" alt="Invoice Stats" width="600px">
+  <img src="/readme/join_acti_stats.jpg" alt="Activity Participation Stats" width="600px">
+</details>
+
+<details>
+  <summary><strong>💸 Invoice Management</strong></summary>
+  <img src="/readme/create_invoice.jpg" alt="Create Invoice" width="600px">
+</details>
+
+<details>
+  <summary><strong>🏘️ Update Room Info</strong></summary>
+  <img src="/readme/update_room_price.jpg" alt="Update Room Price" width="600px">
+</details>
+
+<details>
+  <summary><strong>🔍 Search Room Info</strong></summary>
+  <img src="/readme/search_room_info.jpg" alt="Search Room Info" width="600px">
+</details>
+
+## 📌 Notes
+
+- This project was developed for academic purposes, and can be expanded with role-based access control, validation logics, etc.
+- Some screens are implemented with UI only and may not be fully connected to the backend.
+
+## 📚 License
+
+This project is developed for learning purposes by [Your Name]. Feel free to use or improve it.
